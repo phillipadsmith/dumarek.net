@@ -1,0 +1,87 @@
+---
+const services = [
+  {
+    name: 'Production',
+    blurb:
+      'Full arrangement and instrumentation, played and programmed from scratch. Your song gets a sound that belongs to it alone — no loops, no sample packs.',
+  },
+  {
+    name: 'Songwriting',
+    blurb:
+      'Co-writing that finishes what you started: the hook that will not land, the bridge that is missing, the lyric that says it plainly.',
+  },
+  {
+    name: 'Vocal tracking',
+    blurb:
+      'A dedicated control room and a comfortable read on your best take. We track until it feels effortless, then comp it honest.',
+  },
+  {
+    name: 'Mixing',
+    blurb:
+      'Radio-ready balance with the groove kept intact. You get a mix that translates from club system to phone speaker.',
+  },
+];
+---
+
+<section class="section" id="services">
+  <div class="wrap">
+    <span class="eyebrow">What I do</span>
+    <h2 class="section-title">One roof, whole record</h2>
+    <p class="intro">
+      Bring a voice memo or a half-built session — I meet the song where it is
+      and carry it the rest of the way.
+    </p>
+    <div class="grid">
+      {
+        services.map((s) => (
+          <div class="card">
+            <h3>{s.name}</h3>
+            <p>{s.blurb}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .intro {
+    color: var(--haze);
+    font-size: var(--step-1);
+    margin-bottom: 2.5rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+
+  @media (max-width: 44rem) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card {
+    background: var(--vinyl);
+    padding: 2rem 1.75rem;
+    transition: background 150ms ease;
+  }
+
+  .card:hover {
+    background: var(--vinyl-lift);
+  }
+
+  .card h3 {
+    font-size: var(--step-2);
+    margin-bottom: 0.75rem;
+  }
+
+  .card p {
+    color: var(--haze);
+    margin: 0;
+  }
+</style>

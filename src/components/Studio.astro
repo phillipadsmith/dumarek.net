@@ -1,0 +1,62 @@
+---
+---
+
+<section class="section" id="studio">
+  <div class="wrap studio-grid">
+    <div>
+      <span class="eyebrow">The room</span>
+      <h2 class="section-title">A thousand square feet built for records</h2>
+      <p>
+        The studio is a converted warehouse in Napa, California — a full music
+        and video production space with a dedicated control room for vocals and
+        instruments. Big enough to track a band, quiet enough to hear the
+        difference.
+      </p>
+      <p>
+        Come work in the room, or send sessions remotely — most projects end up
+        being a mix of both.
+      </p>
+    </div>
+    <!-- TODO: replace placeholder with a real studio photo -->
+    <figure class="photo" aria-label="Studio photo coming soon">
+      <span>Studio photo<br />coming soon</span>
+    </figure>
+  </div>
+</section>
+
+<style>
+  .studio-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: center;
+  }
+
+  .photo {
+    margin: 0;
+    aspect-ratio: 4 / 5;
+    border: 1px dashed var(--line);
+    border-radius: 4px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--haze);
+    background:
+      linear-gradient(160deg, rgba(232, 184, 75, 0.05), rgba(217, 74, 140, 0.05)),
+      var(--vinyl-lift);
+  }
+
+  @media (max-width: 44rem) {
+    .studio-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .photo {
+      aspect-ratio: 4 / 3;
+    }
+  }
+</style>

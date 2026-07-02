@@ -1,0 +1,134 @@
+---
+// TODO: replace YOUR_FORM_ID with a real Formspree form ID (formspree.io, free tier).
+// Until then the mailto link below is the working fallback.
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+// TODO: confirm the contact email address.
+const EMAIL = 'hello@dumarek.net';
+---
+
+<section class="section" id="demo">
+  <div class="wrap">
+    <span class="eyebrow">Send your demo</span>
+    <h2 class="section-title">
+      Got a song? <span class="gradient-text">Let me hear it.</span>
+    </h2>
+    <p class="intro">
+      Paste a link to anything — voice memo, SoundCloud, Drive, Dropbox. I
+      listen to everything and reply within a few days.
+    </p>
+    <form action={FORMSPREE_ENDPOINT} method="POST">
+      <div class="row">
+        <label>
+          Name
+          <input type="text" name="name" required autocomplete="name" />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required autocomplete="email" />
+        </label>
+      </div>
+      <label>
+        Link to your demo
+        <input
+          type="url"
+          name="demo_link"
+          placeholder="https://…"
+          required
+        />
+      </label>
+      <label>
+        What do you need?
+        <select name="service">
+          <option>Full production</option>
+          <option>Songwriting</option>
+          <option>Vocal tracking</option>
+          <option>Mixing</option>
+          <option>Not sure yet</option>
+        </select>
+      </label>
+      <label>
+        Tell me about the song
+        <textarea
+          name="message"
+          rows="4"
+          placeholder="Where do you want it to end up?"></textarea>
+      </label>
+      <button class="btn" type="submit">Send it over</button>
+    </form>
+    <p class="fallback">
+      Forms not your thing? Email me directly at
+      <a href={`mailto:${EMAIL}?subject=Demo%20for%20Dumarek`}>{EMAIL}</a>.
+    </p>
+  </div>
+</section>
+
+<style>
+  .intro {
+    color: var(--haze);
+    font-size: var(--step-1);
+    margin-bottom: 2.5rem;
+  }
+
+  form {
+    max-width: 40rem;
+    display: grid;
+    gap: 1.25rem;
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+
+  label {
+    display: grid;
+    gap: 0.4rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--haze);
+  }
+
+  input,
+  select,
+  textarea {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--cream);
+    background: var(--vinyl-lift);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 0.75rem 0.9rem;
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: 2px solid var(--gold);
+    outline-offset: 0;
+    border-color: transparent;
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  button.btn {
+    justify-self: start;
+    margin-top: 0.5rem;
+  }
+
+  .fallback {
+    margin-top: 2rem;
+    color: var(--haze);
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 36rem) {
+    .row {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
