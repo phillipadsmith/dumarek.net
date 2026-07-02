@@ -12,6 +12,32 @@ const {
   title,
   description = 'Dumarek is a music producer in Napa, California making pop songs with a disco soul. Songwriting, instrumentation, vocal tracking, and mixing — all original, no samples. Send your demo.',
 } = Astro.props;
+
+const canonical = new URL(Astro.url.pathname, Astro.site);
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  '@id': 'https://dumarek.net/#studio',
+  name: 'Dumarek',
+  description:
+    'Music production studio in Napa, California: songwriting, instrumentation, vocal tracking, and mixing for pop artists. All original, no samples.',
+  url: 'https://dumarek.net/',
+  email: 'hello@dumarek.net',
+  founder: {
+    '@type': 'Person',
+    name: 'Phillip',
+    jobTitle: 'Music producer',
+  },
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Napa',
+    addressRegion: 'CA',
+    addressCountry: 'US',
+  },
+  sameAs: ['https://lnk.bio/dumarek'],
+  knowsAbout: ['Music production', 'Songwriting', 'Vocal tracking', 'Mixing'],
+};
 ---
 
 <!doctype html>
@@ -21,10 +47,19 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta name="theme-color" content="#141010" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content="Dumarek" />
+    <!-- TODO: add a real 1200x630 share image, then switch twitter:card to summary_large_image
+         and add <meta property="og:image" content="https://dumarek.net/og.jpg" /> -->
+    <meta name="twitter:card" content="summary" />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   </head>
   <body>
     <slot />
