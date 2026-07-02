@@ -38,16 +38,11 @@ _Source: `src/components/Work.astro`_
 
 - **Eyebrow label:** Track sheet
 - **Section title:** Recent work
+- **Placeholder text (until the embed is live):** Player coming soon — hear
+  tracks on lnk.bio
 
-**[TODO — replace all three placeholder tracks]**
-
-| # | Title | Artist | Role | Link |
-|---|-------|--------|------|------|
-| TRK 01 | Track title | Artist name | Production · Mix | # |
-| TRK 02 | Track title | Artist name | Songwriting · Production | # |
-| TRK 03 | Track title | Artist name | Production · Vocals · Mix | # |
-
-- **Closing line:** More on my lnk.bio while this list grows.
+_This section embeds a Disco.ac playlist. **[TODO — paste the Disco share
+link into `DISCO_EMBED_URL` in `src/components/Work.astro`]**_
 
 ---
 
