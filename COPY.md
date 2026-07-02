@@ -130,18 +130,25 @@ _Source: `src/components/About.astro`_
 _Source: `src/components/DemoForm.astro`_
 
 - **Eyebrow label:** Send your demo
-- **Section title:** Got a song? Let me hear it.
-- **Intro:** Paste a link to anything — voice memo, SoundCloud, Drive,
-  Dropbox. I listen to everything and reply within a few days.
+- **Section title:** Let's make music.
+- **Intro:** Submit your inquiry and I'll be in touch within 24 hours.
 
-**Form fields**
+**Form fields** _(all required)_
 
-- Name
-- Email
-- Link to your demo _(placeholder: `https://…`)_
-- What do you need? _(options: Full production / Songwriting / Vocal
-  tracking / Mixing / Not sure yet)_
-- Tell me about the song _(placeholder: Where do you want it to end up?)_
+- Your full name
+- Your email
+- Where are you located?
+- What best describes you? _(options **[TODO — confirm]**: Artist / band ·
+  Songwriter · Manager or label · Other)_
+- Where can I hear your music? _(placeholder: `https://…`)_
+- What are you hoping to accomplish with your song/project?
+- What can I help you with? _(options: Full production / Songwriting /
+  Vocal tracking / Mixing / Not sure yet)_
+- What funds have you allocated to this project? _(options **[TODO —
+  confirm]**: Under $1,000 · $1,000 – $3,000 · $3,000 – $5,000 · $5,000+ ·
+  Prefer to discuss)_
+- Describe your project in detail
+- How did you hear about my work?
 - **Submit button:** Send it over
 
 - **Fallback line:** Forms not your thing? Email me directly at

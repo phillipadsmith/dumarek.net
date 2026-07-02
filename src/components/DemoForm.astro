@@ -2,60 +2,107 @@
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xaqgpgzr';
 // TODO: confirm the contact email address.
 const EMAIL = 'hello@dumarek.net';
+
+// TODO: adjust these dropdown options — placeholders pending Phillip's real lists.
+const describesYou = [
+  'Artist / band',
+  'Songwriter',
+  'Manager or label',
+  'Other',
+];
+const helpWith = [
+  'Full production',
+  'Songwriting',
+  'Vocal tracking',
+  'Mixing',
+  'Not sure yet',
+];
+const budgets = [
+  'Under $1,000',
+  '$1,000 – $3,000',
+  '$3,000 – $5,000',
+  '$5,000+',
+  'Prefer to discuss',
+];
 ---
 
 <section class="section" id="demo">
   <div class="wrap">
     <span class="eyebrow">Send your demo</span>
     <h2 class="section-title">
-      Got a song? <span class="gradient-text">Let me hear it.</span>
+      Let's make <span class="gradient-text">music.</span>
     </h2>
     <p class="intro">
-      Paste a link to anything — voice memo, SoundCloud, Drive, Dropbox. I
-      listen to everything and reply within a few days.
+      Submit your inquiry and I'll be in touch within 24 hours.
     </p>
     <form action={FORMSPREE_ENDPOINT} method="POST">
+      <input
+        type="hidden"
+        name="_subject"
+        value="New inquiry from dumarek.net"
+      />
       <div class="row">
         <label>
-          Name
-          <input type="text" name="name" required autocomplete="name" />
+          Your full name
+          <input type="text" name="full_name" required autocomplete="name" />
         </label>
         <label>
-          Email
+          Your email
           <input type="email" name="email" required autocomplete="email" />
         </label>
       </div>
+      <div class="row">
+        <label>
+          Where are you located?
+          <input
+            type="text"
+            name="location"
+            required
+            autocomplete="address-level2"
+          />
+        </label>
+        <label>
+          What best describes you?
+          <select name="describes_you" required>
+            {describesYou.map((o) => <option>{o}</option>)}
+          </select>
+        </label>
+      </div>
       <label>
-        Link to your demo
-        <input
-          type="url"
-          name="demo_link"
-          placeholder="https://…"
-          required
-        />
+        Where can I hear your music?
+        <input type="url" name="music_link" placeholder="https://…" required />
       </label>
       <label>
-        What do you need?
-        <select name="service">
-          <option>Full production</option>
-          <option>Songwriting</option>
-          <option>Vocal tracking</option>
-          <option>Mixing</option>
-          <option>Not sure yet</option>
-        </select>
+        What are you hoping to accomplish with your song/project?
+        <textarea name="goals" rows="3" required></textarea>
+      </label>
+      <div class="row">
+        <label>
+          What can I help you with?
+          <select name="help_with" required>
+            {helpWith.map((o) => <option>{o}</option>)}
+          </select>
+        </label>
+        <label>
+          What funds have you allocated to this project?
+          <select name="budget" required>
+            {budgets.map((o) => <option>{o}</option>)}
+          </select>
+        </label>
+      </div>
+      <label>
+        Describe your project in detail
+        <textarea name="project_details" rows="5" required></textarea>
       </label>
       <label>
-        Tell me about the song
-        <textarea
-          name="message"
-          rows="4"
-          placeholder="Where do you want it to end up?"></textarea>
+        How did you hear about my work?
+        <input type="text" name="referral_source" required />
       </label>
       <button class="btn" type="submit">Send it over</button>
     </form>
     <p class="fallback">
       Forms not your thing? Email me directly at
-      <a href={`mailto:${EMAIL}?subject=Demo%20for%20Dumarek`}>{EMAIL}</a>.
+      <a href={`mailto:${EMAIL}?subject=Inquiry%20for%20Dumarek`}>{EMAIL}</a>.
     </p>
   </div>
 </section>
@@ -87,6 +134,7 @@ const EMAIL = 'hello@dumarek.net';
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--haze);
+    align-content: start;
   }
 
   input,
