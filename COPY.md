@@ -38,11 +38,19 @@ _Source: `src/components/Work.astro`_
 
 - **Eyebrow label:** Track sheet
 - **Section title:** Recent work
-- **Placeholder text (until the embed is live):** Player coming soon — hear
-  tracks on lnk.bio
 
-_This section embeds a Disco.ac playlist. **[TODO — paste the Disco share
-link into `DISCO_EMBED_URL` in `src/components/Work.astro`]**_
+_Embeds Disco.ac playlist 28423054 (dark theme, tangerine accent)._
+
+---
+
+## Recent instrumentals
+
+_Source: `src/pages/index.astro` (uses `src/components/PlaylistSection.astro`)_
+
+- **Eyebrow label:** Instrumentals
+- **Section title:** Recent instrumentals
+
+_Embeds Disco.ac playlist 29054005 (dark theme, tangerine accent)._
 
 ---
 
