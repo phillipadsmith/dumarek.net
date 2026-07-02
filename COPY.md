@@ -10,11 +10,10 @@ file. Placeholder content that needs real material is marked **[TODO]**.
 
 _Source: `src/layouts/Base.astro`, `src/pages/index.astro`_
 
-- **Browser/tab title:** Dumarek · Music Producer in Napa | Pop with a Disco Soul
-- **Meta description (search result snippet):** Dumarek is a music producer
-  in Napa, California making pop songs with a disco soul. Songwriting,
-  instrumentation, vocal tracking, and mixing — all original, no samples.
-  Send your demo.
+- **Browser/tab title:** Dumarek | Music Production | Mixing & Mastering | Napa, CA | Pop with a Disco Soul
+- **Meta description (search result snippet):** Phillip Dumarek is a music producer
+  in Napa, California. He helps indie artists turn demos into records. Songwriting,
+  instrumentation, vocal tracking, and mixing & mastering. All original, no samples, no AI. Send your demo.
 
 ---
 
@@ -23,18 +22,17 @@ _Source: `src/layouts/Base.astro`, `src/pages/index.astro`_
 _Source: `src/components/Hero.astro`_
 
 - **Wordmark (top of page):** Dumarek
-- **Headline:** Pop songs with a disco soul.
-- **Lede:** I take your demo from an idea in your voice memos to a record
-  that moves people — songwriting, instrumentation, vocals, and mix, all
-  under one roof in Napa, California. Everything original. No samples, ever.
+- **Headline:** Making pop songs with a disco soul.
+- **Lede:** I take your demo from an idea in your voice memos to a radio-ready record
+  that moves people: songwriting, instrumentation, vocal production, mixing and mastering.  All under one roof in Napa, California. Everything original. No samples, No AI, ever.
 - **Primary button:** Send your demo
-- **Secondary button:** Hear the work
+- **Secondary button:** Hear my work
 
 ---
 
 ## Recent work (track sheet)
 
-_Source: `src/components/Work.astro`_
+_Source: `src/pages/index.astro` (uses `src/components/PlaylistSection.astro`)_
 
 - **Eyebrow label:** Track sheet
 - **Section title:** Recent work
@@ -59,25 +57,28 @@ _Embeds Disco.ac playlist 29054005 (dark theme, tangerine accent)._
 _Source: `src/components/Services.astro`_
 
 - **Eyebrow label:** What I do
-- **Section title:** One roof, whole record
-- **Intro:** Bring a voice memo or a half-built session — I meet the song
-  where it is and carry it the rest of the way.
+- **Section title:** Helping you release great music
+- **Intro:** Bring a voice memo or a half-built session. I meet the song
+  where it is and help you carry it the rest of the way.
 
 ### Production
-Full arrangement and instrumentation, played and programmed from scratch.
-Your song gets a sound that belongs to it alone — no loops, no sample packs.
+Full arrangement and instrumentation, played or programmed from scratch.
+Your song gets it's own unique sound.
 
 ### Songwriting
-Co-writing that finishes what you started: the hook that will not land, the
-bridge that is missing, the lyric that says it plainly.
+Co-writing that helps you finish what you started: hooks that land, melodies that stick, unforgettable lyrics.
 
 ### Vocal tracking
-A dedicated control room and a comfortable read on your best take. We track
-until it feels effortless, then comp it honest.
+A calibrated control room, vintage pre-amps and mics, and an honest read on your best take. We track until it feels effortless, then comp it until it sounds effortless.
 
-### Mixing
-Radio-ready balance with the groove kept intact. You get a mix that
-translates from club system to phone speaker.
+### Mixing & Mastering
+Radio-ready balance with the groove kept intact. You get a mix and master that
+translates from club system, to streaming, to phone speaker.
+
+### And when the record is done — video _(full-width card)_
+Getting heard today means social media, and social media means video. This is
+a video production studio too: performance clips, short-form content, visuals
+for the release — shot in the same room where the record was made.
 
 ---
 
@@ -86,19 +87,18 @@ translates from club system to phone speaker.
 _Source: `src/components/Process.astro`_
 
 - **Eyebrow label:** How it works
-- **Section title:** Demo to release in three moves
+- **Section title:** Demo to release in three steps
 
 ### 1 — Send the demo
 A voice memo is enough. Tell me where you want the song to end up and I will
-tell you, plainly, what I would do with it and what it costs.
+tell you, plainly, what I would do with it and what that will cost.
 
 ### 2 — We build the record
-Arrangement, instrumentation, and vocals — in the studio or remote. You hear
-versions as we go and nothing moves forward without your yes.
+Arrangement, instrumentation, and vocals. In the studio or remote. We do everything together in real time. You hear each change as it's made and nothing moves forward without your yes.
 
 ### 3 — You release it
 You walk away with a mixed, release-ready master and every stem. It is your
-record — I just helped it sound like one.
+record, I just helped it meet it's potential.
 
 ---
 
@@ -106,14 +106,12 @@ record — I just helped it sound like one.
 
 _Source: `src/components/Studio.astro`_
 
-- **Eyebrow label:** The room
-- **Section title:** A thousand square feet built for records
-- **Paragraph 1:** The studio is a converted warehouse in Napa, California —
-  a full music and video production space with a dedicated control room for
-  vocals and instruments. Big enough to track a band, quiet enough to hear
-  the difference.
-- **Paragraph 2:** Come work in the room, or send sessions remotely — most
-  projects end up being a mix of both.
+- **Eyebrow label:** The studio
+- **Section title:** A thousand square feet built for the modern artist
+- **Paragraph 1:** The studio is a converted warehouse in Napa, California:
+  a full music and video production space with a dedicated room for
+  vocal recording.
+- **Paragraph 2:** Come work in the room, or work remotely.
 - **Photo placeholder text:** Studio photo coming soon **[TODO — real photo]**
 
 ---
@@ -123,13 +121,13 @@ _Source: `src/components/Studio.astro`_
 _Source: `src/components/About.astro`_
 
 - **Eyebrow label:** About
-- **Section title:** Hi, I'm Dumarek
-- **Paragraph 1:** I'm Phillip — a producer in Napa making the kind of pop
-  that owes its pulse to disco: real grooves, real players, hooks that earn
-  their repetition. I built the studio so artists could make a whole record
-  in one place with one person who cares about it as much as they do.
-- **Paragraph 2:** Every note on every production here is original. No sample
-  packs, no borrowed loops — if you hear it, we made it.
+- **Section title:** Hi, I'm Phillip Dumarek
+- **Photo:** portrait (`src/assets/phillip.jpg`, from lnk.bio profile)
+- **Paragraph 1:** I'm a pop music producer based in Napa, CA. I built the studio so artists could make a whole record in one place with one person who cares about it as much as they do.
+- **Paragraph 2:** It's a full-service studio in the most modern sense —
+  beyond the audio. Artists live on social now, and social runs on video, so
+  when the record is done we can shoot the content that carries it:
+  performance videos, short-form clips, the story around the song.
 
 ---
 
@@ -171,7 +169,8 @@ _The form posts to Formspree (`https://formspree.io/f/xaqgpgzr`)._
 _Source: `src/components/Footer.astro`_
 
 - **Mark:** Dumarek — Napa, California
-- **Links:** lnk.bio **[TODO — add Instagram / Spotify / YouTube]**
+- **Links:** Instagram (instagram.com/therealdumarek) · Spotify (artist
+  1l28YhxS42qSosjk75Tzd2) · lnk.bio
 - **Fine print:** © 2026 Dumarek. All songs original, no samples.
 
 ---

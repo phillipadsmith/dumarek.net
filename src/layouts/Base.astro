@@ -10,7 +10,7 @@ interface Props {
 
 const {
   title,
-  description = 'Dumarek is a music producer in Napa, California making pop songs with a disco soul. Songwriting, instrumentation, vocal tracking, and mixing — all original, no samples. Send your demo.',
+  description = 'Phillip Dumarek is a music producer in Napa, California. He helps indie artists turn demos into records. Songwriting, instrumentation, vocal tracking, and mixing & mastering. All original, no samples, no AI. Send your demo.',
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site);
@@ -21,12 +21,12 @@ const jsonLd = {
   '@id': 'https://dumarek.net/#studio',
   name: 'Dumarek',
   description:
-    'Music production studio in Napa, California: songwriting, instrumentation, vocal tracking, and mixing for pop artists. All original, no samples.',
+    'Full-service music and video production studio in Napa, California: songwriting, instrumentation, vocal tracking, mixing & mastering, and social video content for indie artists. All original, no samples, no AI.',
   url: 'https://dumarek.net/',
   email: 'hello@dumarek.net',
   founder: {
     '@type': 'Person',
-    name: 'Phillip',
+    name: 'Phillip Dumarek',
     jobTitle: 'Music producer',
   },
   address: {
@@ -35,8 +35,18 @@ const jsonLd = {
     addressRegion: 'CA',
     addressCountry: 'US',
   },
-  sameAs: ['https://lnk.bio/dumarek'],
-  knowsAbout: ['Music production', 'Songwriting', 'Vocal tracking', 'Mixing'],
+  sameAs: [
+    'https://lnk.bio/dumarek',
+    'https://www.instagram.com/therealdumarek/',
+    'https://open.spotify.com/artist/1l28YhxS42qSosjk75Tzd2',
+  ],
+  knowsAbout: [
+    'Music production',
+    'Songwriting',
+    'Vocal tracking',
+    'Mixing and mastering',
+    'Music video and social content production',
+  ],
 };
 ---
 

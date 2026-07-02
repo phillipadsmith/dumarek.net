@@ -3,22 +3,22 @@ const services = [
   {
     name: 'Production',
     blurb:
-      'Full arrangement and instrumentation, played and programmed from scratch. Your song gets a sound that belongs to it alone — no loops, no sample packs.',
+      'Full arrangement and instrumentation, played or programmed from scratch. Your song gets its own unique sound.',
   },
   {
     name: 'Songwriting',
     blurb:
-      'Co-writing that finishes what you started: the hook that will not land, the bridge that is missing, the lyric that says it plainly.',
+      'Co-writing that helps you finish what you started: hooks that land, melodies that stick, unforgettable lyrics.',
   },
   {
     name: 'Vocal tracking',
     blurb:
-      'A dedicated control room and a comfortable read on your best take. We track until it feels effortless, then comp it honest.',
+      'A calibrated control room, vintage pre-amps and mics, and an honest read on your best take. We track until it feels effortless, then comp it until it sounds effortless.',
   },
   {
-    name: 'Mixing',
+    name: 'Mixing & Mastering',
     blurb:
-      'Radio-ready balance with the groove kept intact. You get a mix that translates from club system to phone speaker.',
+      'Radio-ready balance with the groove kept intact. You get a mix and master that translates from club system, to streaming, to phone speaker.',
   },
 ];
 ---
@@ -26,10 +26,10 @@ const services = [
 <section class="section" id="services">
   <div class="wrap">
     <span class="eyebrow">What I do</span>
-    <h2 class="section-title">One roof, whole record</h2>
+    <h2 class="section-title">Helping you release great music</h2>
     <p class="intro">
-      Bring a voice memo or a half-built session — I meet the song where it is
-      and carry it the rest of the way.
+      Bring a voice memo or a half-built session. I meet the song where it is
+      and help you carry it the rest of the way.
     </p>
     <div class="grid">
       {
@@ -40,6 +40,15 @@ const services = [
           </div>
         ))
       }
+      <div class="card video">
+        <h3>And when the record is done — <span class="gradient-text">video</span></h3>
+        <p>
+          Getting heard today means social media, and social media means
+          video. This is a video production studio too: performance clips,
+          short-form content, visuals for the release — shot in the same room
+          where the record was made.
+        </p>
+      </div>
     </div>
   </div>
 </section>
@@ -83,5 +92,13 @@ const services = [
   .card p {
     color: var(--haze);
     margin: 0;
+  }
+
+  .card.video {
+    grid-column: 1 / -1;
+  }
+
+  .card.video p {
+    max-width: 58ch;
   }
 </style>
