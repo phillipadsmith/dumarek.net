@@ -17,7 +17,7 @@ _Source: `src/layouts/Base.astro` (description, social tags),
 - **Meta description (search result snippet):** Phillip Dumarek is a music
   producer in Napa, California. He helps indie artists turn demos into
   records. Songwriting, instrumentation, vocal tracking, and mixing &
-  mastering. All original, no samples, no AI. Send your demo.
+  mastering. All original, no uncleared samples, no AI. Send your demo.
 - **Structured data (JSON-LD, not visible on page):** ProfessionalService
   "Dumarek" — full-service music and video production studio in Napa;
   founder Phillip Dumarek; links to Instagram, Spotify.
@@ -37,7 +37,7 @@ _Source: `src/components/Hero.astro`_
 - **Lede:** I take your demo from an idea in your voice memos to a
   radio-ready record that moves people: songwriting, instrumentation, vocal
   production, mixing and mastering. All under one roof in Napa, California.
-  Everything original. No samples, no AI, ever.
+  Everything original. No uncleared samples, no AI.
 - **Primary button:** Send your demo
 - **Secondary button:** Hear my work
 
@@ -164,15 +164,14 @@ _Source: `src/components/DemoForm.astro`_
 - Your full name
 - Your email
 - Where are you located?
-- What best describes you? _(options **[TODO — confirm]**: Artist / band ·
-  Songwriter · Manager or label · Other)_
+- What best describes you? _(options: Artist / band · Songwriter ·
+  Manager or label · Other)_
 - Where can I hear your music? _(placeholder: `https://…`)_
 - What are you hoping to accomplish with your song/project?
 - What can I help you with? _(options: Full production / Songwriting /
   Vocal tracking / Mixing / Not sure yet)_
-- What funds have you allocated to this project? _(options **[TODO —
-  confirm]**: Under $1,000 · $1,000 – $3,000 · $3,000 – $5,000 · $5,000+ ·
-  Prefer to discuss)_
+- What funds have you allocated to this project? _(options: Under $1,000 ·
+  $1,000 – $3,000 · $3,000 – $5,000 · $5,000+ · Prefer to discuss)_
 - Describe your project in detail
 - How did you hear about my work?
 - **Submit button:** Send it over
@@ -192,7 +191,8 @@ _Source: `src/components/Footer.astro`_
 - **Mark:** Dumarek — Napa, California
 - **Links:** Instagram (instagram.com/therealdumarek) · Spotify (artist
   1l28YhxS42qSosjk75Tzd2)
-- **Fine print:** © [current year] Dumarek. All songs original, no samples.
+- **Fine print:** © [current year] Dumarek. All songs original, no
+  uncleared samples.
   _(year fills in automatically)_
 
 ---

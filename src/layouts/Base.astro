@@ -10,7 +10,7 @@ interface Props {
 
 const {
   title,
-  description = 'Phillip Dumarek is a music producer in Napa, California. He helps indie artists turn demos into records. Songwriting, instrumentation, vocal tracking, and mixing & mastering. All original, no samples, no AI. Send your demo.',
+  description = 'Phillip Dumarek is a music producer in Napa, California. He helps indie artists turn demos into records. Songwriting, instrumentation, vocal tracking, and mixing & mastering. All original, no uncleared samples, no AI. Send your demo.',
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site);
@@ -21,7 +21,7 @@ const jsonLd = {
   '@id': 'https://dumarek.net/#studio',
   name: 'Dumarek',
   description:
-    'Full-service music and video production studio in Napa, California: songwriting, instrumentation, vocal tracking, mixing & mastering, and social video content for indie artists. All original, no samples, no AI.',
+    'Full-service music and video production studio in Napa, California: songwriting, instrumentation, vocal tracking, mixing & mastering, and social video content for indie artists. All original, no uncleared samples, no AI.',
   url: 'https://dumarek.net/',
   email: 'music@dumarek.net',
   founder: {
