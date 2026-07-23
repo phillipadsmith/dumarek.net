@@ -23,7 +23,7 @@ _Source: `src/layouts/Base.astro` (description, social tags),
   founder Phillip Dumarek; links to Instagram, Spotify.
 - **Share image (og:image):** branded 1200×630 card at `public/og.jpg` —
   sunburst, wordmark, "Pop songs with a disco soul.", "Music Production,
-  Mixing & Mastering — Napa, California"
+  Mixing & Mastering — Napa, CA"
 
 ---
 
