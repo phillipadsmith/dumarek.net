@@ -21,7 +21,9 @@ _Source: `src/layouts/Base.astro` (description, social tags),
 - **Structured data (JSON-LD, not visible on page):** ProfessionalService
   "Dumarek" — full-service music and video production studio in Napa;
   founder Phillip Dumarek; links to Instagram, Spotify.
-  **[TODO — og:image: add a 1200×630 share image at `public/og.jpg`]**
+- **Share image (og:image):** branded 1200×630 card at `public/og.jpg` —
+  sunburst, wordmark, "Pop songs with a disco soul.", "Music + video
+  production — Napa, California"
 
 ---
 
@@ -87,12 +89,12 @@ sounds effortless.
 
 ### Mixing & Mastering
 Radio-ready balance with the groove kept intact. You get a mix and master
-that translates from club system, to streaming, to phone speaker.
+that translates from hi-fi system, to streaming, to car, to phone speaker.
 
 ### And when the record is done — video _(full-width card; "video" in gradient)_
 Getting heard today means social media, and social media means video. This is
 a video production studio too: performance clips, short-form content, visuals
-for the release — shot in the same room where the record was made.
+for the release — shot in the same location where the record was made.
 
 ---
 

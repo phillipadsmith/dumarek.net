@@ -65,9 +65,14 @@ const jsonLd = {
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical} />
     <meta property="og:site_name" content="Dumarek" />
-    <!-- TODO: add a real 1200x630 share image, then switch twitter:card to summary_large_image
-         and add <meta property="og:image" content="https://dumarek.net/og.jpg" /> -->
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:image" content="https://dumarek.net/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Dumarek — Pop songs with a disco soul. Music + video production, Napa, California."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   </head>
   <body>
