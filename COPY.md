@@ -22,8 +22,8 @@ _Source: `src/layouts/Base.astro` (description, social tags),
   "Dumarek" — full-service music and video production studio in Napa;
   founder Phillip Dumarek; links to Instagram, Spotify.
 - **Share image (og:image):** branded 1200×630 card at `public/og.jpg` —
-  sunburst, wordmark, "Pop songs with a disco soul.", "Music Production,
-  Mixing & Mastering — Napa, CA"
+  sunburst, wordmark, "Producing pop records with a disco soul.",
+  "Music Production, Mixing & Mastering — Napa, CA"
 
 ---
 
@@ -32,7 +32,7 @@ _Source: `src/layouts/Base.astro` (description, social tags),
 _Source: `src/components/Hero.astro`_
 
 - **Wordmark (top of page):** Dumarek
-- **Headline:** Making pop songs with a disco soul. _("disco soul" in
+- **Headline:** Producing pop records with a disco soul. _("disco soul" in
   gradient)_
 - **Lede:** I take your demo from an idea in your voice memos to a
   radio-ready record that moves people: songwriting, instrumentation, vocal
