@@ -128,7 +128,7 @@ _Source: `src/components/Studio.astro`_
   a full music and video production space with a dedicated room for vocal
   recording.
 - **Paragraph 2:** Come work in the room, or work remotely.
-- **Photo placeholder text:** Studio photo coming soon **[TODO — real photo]**
+- **Photo:** interior shot beside the text (`src/assets/studio.jpg`)
 
 ---
 
