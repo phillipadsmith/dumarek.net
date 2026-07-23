@@ -1,0 +1,108 @@
+---
+---
+
+<header class="hero">
+  <div class="sunburst" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <p class="wordmark">Dumarek</p>
+    <div class="hero-copy">
+      <h1>
+        Making pop songs with a
+        <span class="gradient-text">disco&nbsp;soul</span>.
+      </h1>
+      <p class="lede">
+        I take your demo from an idea in your voice memos to a radio-ready
+        record that moves people: songwriting, instrumentation, vocal
+        production, mixing and mastering. All under one roof in Napa,
+        California. Everything original. No uncleared samples, no AI.
+      </p>
+      <div class="hero-actions">
+        <a class="btn" href="#demo">Send your demo</a>
+        <a class="btn-ghost" href="#work">Hear my work</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: 100svh;
+    display: flex;
+    overflow: hidden;
+    padding-block: clamp(1.5rem, 4vh, 3rem);
+  }
+
+  /* Signature: 70s record-sleeve sunburst — concentric warm bands
+     rising behind the headline. */
+  .sunburst {
+    position: absolute;
+    bottom: 0;
+    right: max(-6rem, -8vw);
+    width: min(85vmin, 54rem);
+    aspect-ratio: 2 / 1;
+    background: repeating-radial-gradient(
+      circle at 50% 100%,
+      var(--magenta) 0 17%,
+      transparent 17% 22%,
+      var(--tangerine) 22% 39%,
+      transparent 39% 44%,
+      var(--gold) 44% 61%,
+      transparent 61% 100%
+    );
+    opacity: 0.75;
+    mask-image: linear-gradient(to top, black 60%, transparent 100%);
+    animation: rise 1.6s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    pointer-events: none;
+  }
+
+  @keyframes rise {
+    from {
+      transform: translateY(14%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 0.75;
+    }
+  }
+
+  .hero-inner {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+
+  .wordmark {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--haze);
+    margin: 0;
+  }
+
+  h1 {
+    font-size: var(--step-4);
+    max-width: 14ch;
+    margin-bottom: 1.5rem;
+  }
+
+  .lede {
+    font-size: var(--step-1);
+    line-height: 1.5;
+    color: var(--cream);
+    max-width: 48ch;
+    margin-bottom: 2.25rem;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+  }
+</style>

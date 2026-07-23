@@ -1,0 +1,81 @@
+---
+import '@fontsource-variable/bricolage-grotesque';
+import '@fontsource-variable/instrument-sans';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = 'Phillip Dumarek is a music producer in Napa, California. He helps indie artists turn demos into records. Songwriting, instrumentation, vocal tracking, and mixing & mastering. All original, no uncleared samples, no AI. Send your demo.',
+} = Astro.props;
+
+const canonical = new URL(Astro.url.pathname, Astro.site);
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  '@id': 'https://dumarek.net/#studio',
+  name: 'Dumarek',
+  description:
+    'Full-service music and video production studio in Napa, California: songwriting, instrumentation, vocal tracking, mixing & mastering, and social video content for indie artists. All original, no uncleared samples, no AI.',
+  url: 'https://dumarek.net/',
+  email: 'music@dumarek.net',
+  founder: {
+    '@type': 'Person',
+    name: 'Phillip Dumarek',
+    jobTitle: 'Music producer',
+  },
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Napa',
+    addressRegion: 'CA',
+    addressCountry: 'US',
+  },
+  sameAs: [
+    'https://www.instagram.com/therealdumarek/',
+    'https://open.spotify.com/artist/1l28YhxS42qSosjk75Tzd2',
+  ],
+  knowsAbout: [
+    'Music production',
+    'Songwriting',
+    'Vocal tracking',
+    'Mixing and mastering',
+    'Music video and social content production',
+  ],
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta name="theme-color" content="#141010" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content="Dumarek" />
+    <meta property="og:image" content="https://dumarek.net/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Dumarek — Pop songs with a disco soul. Music production, mixing & mastering — Napa, CA."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

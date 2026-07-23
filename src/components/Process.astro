@@ -1,0 +1,70 @@
+---
+const steps = [
+  {
+    n: '1',
+    name: 'Send the demo',
+    blurb:
+      'A voice memo is enough. Tell me where you want the song to end up and I will tell you, plainly, what I would do with it and what that will cost.',
+  },
+  {
+    n: '2',
+    name: 'We build the record',
+    blurb:
+      "Arrangement, instrumentation, and vocals. In the studio or remote. We do everything together in real time. You hear each change as it's made and nothing moves forward without your yes.",
+  },
+  {
+    n: '3',
+    name: 'You release it',
+    blurb:
+      'You walk away with a mixed, release-ready master and every stem. It is your record, I just helped it meet its potential.',
+  },
+];
+---
+
+<section class="section" id="process">
+  <div class="wrap">
+    <span class="eyebrow">How it works</span>
+    <h2 class="section-title">Demo to release in three steps</h2>
+    <ol class="steps">
+      {
+        steps.map((s) => (
+          <li>
+            <span class="num gradient-text">{s.n}</span>
+            <h3>{s.name}</h3>
+            <p>{s.blurb}</p>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</section>
+
+<style>
+  .steps {
+    list-style: none;
+    margin: 2.5rem 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 2.5rem;
+  }
+
+  .num {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--step-4);
+    line-height: 1;
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+
+  .steps h3 {
+    font-size: var(--step-2);
+    margin-bottom: 0.5rem;
+  }
+
+  .steps p {
+    color: var(--haze);
+    margin: 0;
+  }
+</style>

@@ -1,0 +1,60 @@
+---
+import { Image } from 'astro:assets';
+import portrait from '../assets/phillip.jpg';
+---
+
+<section class="section" id="about">
+  <div class="wrap about-grid">
+    <div>
+      <span class="eyebrow">About</span>
+      <h2 class="section-title">Hi, I'm Phillip Dumarek</h2>
+      <p>
+        I'm a pop music producer based in Napa, CA. I built the studio so
+        artists could make a whole record in one place with one person who
+        cares about it as much as they do.
+      </p>
+      <p>
+        It's a full-service studio in the most modern sense — beyond the
+        audio. Artists live on social now, and social runs on video, so when
+        the record is done we can shoot the content that carries it:
+        performance videos, short-form clips, the story around the song.
+      </p>
+    </div>
+    <Image
+      class="portrait"
+      src={portrait}
+      alt="Phillip Dumarek"
+      width={512}
+      height={512}
+      loading="lazy"
+    />
+  </div>
+</section>
+
+<style>
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: center;
+  }
+
+  .portrait {
+    width: 100%;
+    max-width: 22rem;
+    height: auto;
+    border-radius: 4px;
+    border: 1px solid var(--line);
+    justify-self: end;
+  }
+
+  @media (max-width: 44rem) {
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .portrait {
+      justify-self: start;
+    }
+  }
+</style>

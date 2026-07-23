@@ -1,0 +1,104 @@
+---
+const services = [
+  {
+    name: 'Production',
+    blurb:
+      'Full arrangement and instrumentation, played or programmed from scratch. Your song gets its own unique sound.',
+  },
+  {
+    name: 'Songwriting',
+    blurb:
+      'Co-writing that helps you finish what you started: hooks that land, melodies that stick, unforgettable lyrics.',
+  },
+  {
+    name: 'Vocal tracking',
+    blurb:
+      'A calibrated control room, vintage pre-amps and mics, and an honest read on your best take. We track until it feels effortless, then comp it until it sounds effortless.',
+  },
+  {
+    name: 'Mixing & Mastering',
+    blurb:
+      'Radio-ready balance with the groove kept intact. You get a mix and master that translates from hi-fi system, to streaming, to car, to phone speaker.',
+  },
+];
+---
+
+<section class="section" id="services">
+  <div class="wrap">
+    <span class="eyebrow">What I do</span>
+    <h2 class="section-title">Helping you release great music</h2>
+    <p class="intro">
+      Bring a voice memo or a half-built session. I meet the song where it is
+      and help you carry it the rest of the way.
+    </p>
+    <div class="grid">
+      {
+        services.map((s) => (
+          <div class="card">
+            <h3>{s.name}</h3>
+            <p>{s.blurb}</p>
+          </div>
+        ))
+      }
+      <div class="card video">
+        <h3>And when the record is done — <span class="gradient-text">video</span></h3>
+        <p>
+          Getting heard today means social media, and social media means
+          video. This is a video production studio too: performance clips,
+          short-form content, visuals for the release — shot in the same
+          location where the record was made.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .intro {
+    color: var(--haze);
+    font-size: var(--step-1);
+    margin-bottom: 2.5rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+
+  @media (max-width: 44rem) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card {
+    background: var(--vinyl);
+    padding: 2rem 1.75rem;
+    transition: background 150ms ease;
+  }
+
+  .card:hover {
+    background: var(--vinyl-lift);
+  }
+
+  .card h3 {
+    font-size: var(--step-2);
+    margin-bottom: 0.75rem;
+  }
+
+  .card p {
+    color: var(--haze);
+    margin: 0;
+  }
+
+  .card.video {
+    grid-column: 1 / -1;
+  }
+
+  .card.video p {
+    max-width: 58ch;
+  }
+</style>

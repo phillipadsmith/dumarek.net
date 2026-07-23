@@ -1,0 +1,30 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Page not found — Dumarek">
+  <main class="wrap notfound">
+    <p class="eyebrow">404</p>
+    <h1>That track doesn't exist.</h1>
+    <p>The page you're after isn't here — but the music is.</p>
+    <a class="btn" href="/">Back to the record</a>
+  </main>
+</Base>
+
+<style>
+  .notfound {
+    min-height: 80svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  h1 {
+    font-size: var(--step-3);
+  }
+
+  .btn {
+    margin-top: 1rem;
+  }
+</style>

@@ -1,0 +1,37 @@
+---
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import PlaylistSection from '../components/PlaylistSection.astro';
+import Services from '../components/Services.astro';
+import Process from '../components/Process.astro';
+import Studio from '../components/Studio.astro';
+import About from '../components/About.astro';
+import DemoForm from '../components/DemoForm.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Base title="Dumarek | Music Production | Mixing & Mastering | Napa, CA | Pop with a Disco Soul">
+  <Hero />
+  <main>
+    <PlaylistSection
+      id="work"
+      eyebrow="Track sheet"
+      title="Recent work"
+      embedSrc="https://dumarek.disco.ac/e/p/28423054?download=false&s=ih0_S1Sh5OLuH6kfl7mkjYpHBvk%3Ae7ovJuUV&artwork=true&color=%23E8683A&theme=dark"
+      embedTitle="Dumarek — recent work playlist on Disco"
+    />
+    <PlaylistSection
+      id="instrumentals"
+      eyebrow="Instrumentals"
+      title="Recent instrumentals"
+      embedSrc="https://dumarek.disco.ac/e/p/29054005?download=false&s=_GiCk70KDloJqAmKsMDLWigqhz0%3A2iINz08x&artwork=true&color=%23E8683A&theme=dark"
+      embedTitle="Dumarek — recent instrumentals playlist on Disco"
+    />
+    <Services />
+    <Process />
+    <Studio />
+    <About />
+    <DemoForm />
+  </main>
+  <Footer />
+</Base>

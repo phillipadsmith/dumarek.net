@@ -1,0 +1,50 @@
+---
+import { Image } from 'astro:assets';
+import studio from '../assets/studio.jpg';
+---
+
+<section class="section" id="studio">
+  <div class="wrap studio-grid">
+    <div>
+      <span class="eyebrow">The studio</span>
+      <h2 class="section-title">
+        A thousand square feet built for the modern artist
+      </h2>
+      <p>
+        The studio is a converted warehouse in Napa, California: a full music
+        and video production space with a dedicated room for vocal recording.
+      </p>
+      <p>Come work in the room, or work remotely.</p>
+    </div>
+    <Image
+      class="photo"
+      src={studio}
+      alt="Inside the Dumarek studio: couch, mixing desk, monitors, and racked gear"
+      width={1000}
+      height={750}
+      loading="lazy"
+    />
+  </div>
+</section>
+
+<style>
+  .studio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: center;
+  }
+
+  .photo {
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+  }
+
+  @media (max-width: 44rem) {
+    .studio-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,58 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer>
+  <div class="wrap footer-inner">
+    <p class="mark">Dumarek — Napa, California</p>
+    <nav aria-label="Social links">
+      <a href="https://www.instagram.com/therealdumarek/">Instagram</a>
+      <a href="https://open.spotify.com/artist/1l28YhxS42qSosjk75Tzd2">Spotify</a>
+    </nav>
+    <p class="fine">© {year} Dumarek. All songs original, no uncleared samples.</p>
+  </div>
+</footer>
+
+<style>
+  footer {
+    margin-top: var(--space-section);
+    border-top: 1px solid var(--line);
+    padding-block: 2.5rem;
+  }
+
+  .footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 1rem 2rem;
+  }
+
+  .mark {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--haze);
+    margin: 0;
+  }
+
+  nav {
+    display: flex;
+    gap: 1.5rem;
+    margin-inline-start: auto;
+  }
+
+  nav a {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .fine {
+    width: 100%;
+    color: var(--haze);
+    font-size: 0.8rem;
+    margin: 0;
+  }
+</style>
