@@ -20,7 +20,7 @@ _Source: `src/layouts/Base.astro` (description, social tags),
   mastering. All original, no samples, no AI. Send your demo.
 - **Structured data (JSON-LD, not visible on page):** ProfessionalService
   "Dumarek" — full-service music and video production studio in Napa;
-  founder Phillip Dumarek; links to lnk.bio, Instagram, Spotify.
+  founder Phillip Dumarek; links to Instagram, Spotify.
   **[TODO — og:image: add a 1200×630 share image at `public/og.jpg`]**
 
 ---
@@ -176,7 +176,7 @@ _Source: `src/components/DemoForm.astro`_
 - **Submit button:** Send it over
 
 - **Fallback line:** Forms not your thing? Email me directly at
-  hello@dumarek.net. **[TODO — confirm email address]**
+  music@dumarek.net.
 
 _The form posts to Formspree (`https://formspree.io/f/xaqgpgzr`) with email
 subject "New inquiry from dumarek.net"._
@@ -189,7 +189,7 @@ _Source: `src/components/Footer.astro`_
 
 - **Mark:** Dumarek — Napa, California
 - **Links:** Instagram (instagram.com/therealdumarek) · Spotify (artist
-  1l28YhxS42qSosjk75Tzd2) · lnk.bio (lnk.bio/dumarek)
+  1l28YhxS42qSosjk75Tzd2)
 - **Fine print:** © [current year] Dumarek. All songs original, no samples.
   _(year fills in automatically)_
 
