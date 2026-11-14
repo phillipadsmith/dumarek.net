@@ -1,0 +1,74 @@
+---
+import { Image } from 'astro:assets';
+// Label logo: swap this one file to update it (square, 500px+).
+import logo from '../assets/dumarek-rekords-logo.png';
+
+const EMAIL = 'music@dumarek.net';
+---
+
+<section class="section" id="rekords">
+  <div class="wrap rekords-grid">
+    <Image
+      class="logo"
+      src={logo}
+      alt="Dumarek Rekords logo"
+      width={320}
+      height={320}
+      loading="lazy"
+    />
+    <div>
+      <span class="eyebrow">The label</span>
+      <h2 class="section-title">Dumarek Rekords</h2>
+      <p>
+        Dumarek Rekords is the independent house label of Napa, California
+        producer Dumarek, releasing original house music with a disco and soul
+        influence.
+      </p>
+      <nav class="links" aria-label="Dumarek Rekords links">
+        <a href="https://open.spotify.com/artist/1l28YhxS42qSosjk75Tzd2">Spotify</a>
+        <a href="https://soundcloud.com/dumarek">SoundCloud</a>
+        <a href="https://www.instagram.com/therealdumarek/">Instagram</a>
+        <a href={`mailto:${EMAIL}?subject=Dumarek%20Rekords`}>{EMAIL}</a>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<style>
+  .rekords-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: center;
+  }
+
+  .logo {
+    width: clamp(9rem, 20vw, 13rem);
+    height: auto;
+    border-radius: 4px;
+    border: 1px solid var(--line);
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.5rem;
+  }
+
+  .links a {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .links a[href^='mailto:'] {
+    text-transform: none;
+  }
+
+  @media (max-width: 44rem) {
+    .rekords-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
